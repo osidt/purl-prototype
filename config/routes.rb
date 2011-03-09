@@ -1,5 +1,9 @@
 Purl::Application.routes.draw do
   resources :translations
+  
+  get ':old_url' => 'translations#translate', :as => 'translate_path'
+  
+  root :to => 'translations#index'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

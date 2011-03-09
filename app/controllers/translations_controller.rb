@@ -1,4 +1,9 @@
 class TranslationsController < ApplicationController
+  # GET /http://qld.gov.au/old
+  def translate
+    redirect_to Translation.find_by_old_url(params[:old_url]).new_url
+  end
+  
   # GET /translations
   # GET /translations.xml
   def index
