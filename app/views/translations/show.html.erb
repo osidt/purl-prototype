@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Old url:</b>
+  <%= @translation.old_url %>
+</p>
+
+<p>
+  <b>New url:</b>
+  <%= @translation.new_url %>
+</p>
+
+
+<%= link_to 'Edit', edit_translation_path(@translation) %> |
+<%= link_to 'Back', translations_path %>
